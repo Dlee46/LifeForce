@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>Submitting A Case</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>dannyl.dhl@gmail.com</replyToEmail>
+            <senderEmail>dannyl.dhl@gmail.com</senderEmail>
+            <senderName>Customer Support</senderName>
+            <template>unfiled$public/SupportCaseCreatedWebInquiries</template>
+        </ruleEntry>
+    </autoResponseRule>
+</AutoResponseRules>
