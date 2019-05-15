@@ -367,6 +367,22 @@
         </relatedContentItems>
     </relatedContent>
     <relatedLists>
+        <fields>FULL_NAME</fields>
+        <fields>CORE.USERS.EMAIL</fields>
+        <fields>ROLE_IN_TERRITORY</fields>
+        <fields>TERRITORY.NAME</fields>
+        <fields>MODEL.NAME</fields>
+        <relatedList>AccountUserTerritory2RelatedList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>TERRITORY.NAME</fields>
+        <fields>MODEL.NAME</fields>
+        <fields>MODEL.STATE</fields>
+        <fields>ASSIGNMENT_DATE</fields>
+        <fields>ASSOCIATION_CAUSE</fields>
+        <relatedList>AccountAssignedTerritory2sRelatedList</relatedList>
+    </relatedLists>
+    <relatedLists>
         <fields>ASSET.NAME</fields>
         <fields>ASSET.SERIAL_NUMBER</fields>
         <fields>ASSET.INSTALL_DATE</fields>
@@ -412,14 +428,6 @@
         <relatedList>RelatedActivityList</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>TERRITORY.NAME</fields>
-        <fields>MODEL.NAME</fields>
-        <fields>MODEL.STATE</fields>
-        <fields>ASSIGNMENT_DATE</fields>
-        <fields>ASSOCIATION_CAUSE</fields>
-        <relatedList>AccountAssignedTerritory2sRelatedList</relatedList>
-    </relatedLists>
-    <relatedLists>
         <fields>TASK.SUBJECT</fields>
         <fields>TASK.WHO_NAME</fields>
         <fields>TASK.WHAT_NAME</fields>
@@ -437,6 +445,12 @@
         <fields>OPPORTUNITY.NAME</fields>
         <fields>PARTNER.ROLE</fields>
         <relatedList>RelatedPartnerList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>FULL_NAME</fields>
+        <fields>LEAD.COMPANY</fields>
+        <fields>LEAD.PHONE</fields>
+        <relatedList>Lead.Account__c</relatedList>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>
