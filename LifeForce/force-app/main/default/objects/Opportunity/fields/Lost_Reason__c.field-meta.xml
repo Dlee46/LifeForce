@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Lost Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Authority</fullName>
+                <default>false</default>
+                <label>Authority</label>
+            </value>
+            <value>
+                <fullName>Competition</fullName>
+                <default>false</default>
+                <label>Competition</label>
+            </value>
+            <value>
+                <fullName>Feature</fullName>
+                <default>false</default>
+                <label>Feature</label>
+            </value>
+            <value>
+                <fullName>Inactivity</fullName>
+                <default>false</default>
+                <label>Inactivity</label>
+            </value>
+            <value>
+                <fullName>Lost Momentum</fullName>
+                <default>false</default>
+                <label>Lost Momentum</label>
+            </value>
+            <value>
+                <fullName>Need</fullName>
+                <default>false</default>
+                <label>Need</label>
+            </value>
+            <value>
+                <fullName>Poor Qualification</fullName>
+                <default>false</default>
+                <label>Poor Qualification</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Timing</fullName>
+                <default>false</default>
+                <label>Timing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

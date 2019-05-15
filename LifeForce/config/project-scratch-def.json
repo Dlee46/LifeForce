@@ -1,7 +1,17 @@
 {
   "orgName": "dannylee Company",
   "edition": "Developer",
-  "features": [],
+  "features": [
+    "Communities",
+    "Chatbot",
+    "Knowledge",
+    "LiveAgent",
+    "ProcessBuilder",
+    "StateAndCountryPicklist",
+    "TerritoryManagement",
+    "Workflow",
+    "Sites"
+  ],
   "settings": {
     "orgPreferenceSettings": {
       "s1DesktopEnabled": true

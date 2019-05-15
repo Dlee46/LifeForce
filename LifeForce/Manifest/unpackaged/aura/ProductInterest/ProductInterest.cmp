@@ -1,0 +1,85 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="ProductSelectionController" >
+    <aura:attribute name="product" type="List" default="{'sObjectType':'Product2'}"/>
+    <aura:attribute name="searchKeyword" type="String"/>
+    <aura:attribute name ="isOpen" type ="boolean" default ="false"/>
+    
+    
+    <!-- Modal Start -->
+   <!-- <div class = "slds-m-around_xx-large"> -->
+        <lightning:button variant = "brand"
+                          label = "Add Products"
+                          title = "Add Products"
+                          onclick = "{!c.openModel}" />
+        <aura:if isTrue = "{!v.isOpen}">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class = "slds-modal__container">
+                    
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <!-- Search Bar -->
+                        <lightning:layout verticalAlign="end">
+                            <lightning:layoutItem size="5" padding="around-small">
+                                <lightning:input value="{!v.searchKeyword}"
+                                                 required="true"
+                                                 placeholder="search.."
+                                                 aura:id="searchField"
+                                                 label="Product Name"/>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="3" padding="around-small">
+                                <lightning:button onclick="{!c.Search}"
+                                                  variant="brand"
+                                                  label="Search"
+                                                  iconName="utility:search"/> 
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </header>	
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        
+                        <!-- Table Displayed -->
+                        <table class="slds-table slds-table--bordered slds-table--striped slds-table--cell-buffer slds-table--fixed-layout">
+                            <thead>
+                                <tr class="slds-text-heading--label" >
+                                    <th scope="row" class="slds-text-align--right">
+                                        <ui:inputCheckbox aura:id="checkbox" class="checkBox" change="{!c.selectAll}"/>
+                                    </th>
+                                    <th scope="row">
+                                        <div class="slds-truncate" title="Id">ID</div>
+                                    </th>
+                                    <th scope="row">
+                                        <div class="slds-truncate" title="Name">Name</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <aura:iteration items="{!v.product}" var="p">
+                                    <tr>
+                                        <td>
+                                            <ui:inputCheckbox aura:id="checkboxRow" text="{!p.Id}" class="checkBox" change="{!c.unselectAll}"/>
+                                        </td>
+                                        <th>
+                                            <div class="slds-truncate">{!p.Id}</div>
+                                        </th>
+                                        <td>
+                                            <div class="slds-truncate">{!p.Name}</div>
+                                        </td>
+                                    </tr>
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <lightning:button label="Add"
+                                          iconName="utility:add"
+                                          iconPosition="left"
+                                          onclick="{!c.addSelected}">
+                        </lightning:button>
+                    </footer>
+                </div>
+            </section>
+            <div class = "slds-backdrop slds-backdrop_open"></div>
+        </aura:if>
+</aura:component>

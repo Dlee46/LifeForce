@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Life_Science_Customer_Support</letterhead>
+    <name>Reimbursement Approval</name>
+    <style>freeForm</style>
+    <subject>{!Case.CaseNumber} {!Case.Reimbursement_Request__r}</subject>
+    <textOnly>The status of the reimbursement request is {!Case.Reimbursement_Request__r}.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

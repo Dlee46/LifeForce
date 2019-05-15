@@ -54,17 +54,16 @@
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
         <fullName>Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Case</label>
         <referenceTo>Case</referenceTo>
         <relationshipLabel>Product Selections</relationshipLabel>
         <relationshipName>Product_Selections</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Product__c</fullName>
@@ -91,7 +90,9 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Product Selections</pluralLabel>
-    <searchLayouts/>
-    <sharingModel>ControlledByParent</sharingModel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Product__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

@@ -10,3 +10,6 @@ package.xml
 
 # LWC Jest
 **/__tests__/**
+
+Manifest
+raw-project-data-dev.xml

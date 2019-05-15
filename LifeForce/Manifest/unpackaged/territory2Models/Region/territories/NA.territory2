@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2 xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accountAccessLevel>All</accountAccessLevel>
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>NA Region</description>
+    <name>NA</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <ruleAssociations>
+        <inherited>false</inherited>
+        <ruleName>Canada</ruleName>
+    </ruleAssociations>
+    <ruleAssociations>
+        <inherited>false</inherited>
+        <ruleName>USA</ruleName>
+    </ruleAssociations>
+    <territory2Type>Geographic_Region</territory2Type>
+</Territory2>

@@ -1,0 +1,46 @@
+<aura:component controller="DuplicateLeadsController" implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" access="global" >
+    <!-- Id of the Account the page hosting this component is showing -->
+    <aura:attribute name="recordId" type="Id" />  
+    <aura:attribute name="leads" type="List" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <!--Make a card-->
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-standard-contact" title="Duplicate Leads">
+                        <lightning:icon iconName="standard:lead" alternativeText="Lead" variant="warning"/>
+                        <span class="slds-assistive-text">contact</span>
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Leads (1)">
+                            <span>Duplicate Leads</span>
+                        </a>
+                    </h2>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body">
+            <!--Make a table-->
+            <table class="slds-table slds-table_bordered slds-table_striped slds-table_cell-buffer slds-table_fixed-layout">
+                <thead>
+                    <tr class="slds-text-heading_label">
+                        <th scope="col"><div class="slds-truncate" title="ID">Name</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Name">Duplicity Level</div></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Use the Apex model and controller to fetch server side data -->
+                    <aura:iteration items="{!v.leads}" var="lead">
+                        <tr>
+                            <th scope="row"><div class="slds-truncate" title="{!lead.Id}">{!lead.name}</div></th>
+                            <td><div class="slds-truncate" title="{!lead.Name}">{!lead.duplicityLevel}%</div></td>
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+        </div>
+    </article>
+</aura:component>

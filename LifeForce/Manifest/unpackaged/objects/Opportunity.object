@@ -1,45 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <actionOverrides>
-        <actionName>AddInfluence</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>CancelEdit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Clone</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Delete</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Edit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>List</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>New</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>SaveEdit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Tab</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
     <businessProcesses>
         <fullName>Business Opportunity Sales</fullName>
         <description>Sales opportunity process</description>
@@ -85,37 +45,6 @@
             <default>false</default>
         </values>
     </businessProcesses>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <enableFeeds>true</enableFeeds>
-    <enableHistory>false</enableHistory>
-    <fields>
-        <fullName>AccountId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>Amount</fullName>
-        <trackFeedHistory>true</trackFeedHistory>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
-        <fullName>CampaignId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>CloseDate</fullName>
-        <trackFeedHistory>true</trackFeedHistory>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
-        <fullName>ContractId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
     <fields>
         <fullName>CurrentGenerators__c</fullName>
         <externalId>false</externalId>
@@ -157,32 +86,64 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>Description</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
-        <fullName>ExpectedRevenue</fullName>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
-        <fullName>IqScore</fullName>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
-        <fullName>IsExcludedFromTerritory2Filter</fullName>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
-        <fullName>IsPrivate</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
-        <fullName>LeadSource</fullName>
+        <fullName>Lost_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Lost Reason</label>
+        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Authority</fullName>
+                    <default>false</default>
+                    <label>Authority</label>
+                </value>
+                <value>
+                    <fullName>Competition</fullName>
+                    <default>false</default>
+                    <label>Competition</label>
+                </value>
+                <value>
+                    <fullName>Feature</fullName>
+                    <default>false</default>
+                    <label>Feature</label>
+                </value>
+                <value>
+                    <fullName>Inactivity</fullName>
+                    <default>false</default>
+                    <label>Inactivity</label>
+                </value>
+                <value>
+                    <fullName>Lost Momentum</fullName>
+                    <default>false</default>
+                    <label>Lost Momentum</label>
+                </value>
+                <value>
+                    <fullName>Need</fullName>
+                    <default>false</default>
+                    <label>Need</label>
+                </value>
+                <value>
+                    <fullName>Poor Qualification</fullName>
+                    <default>false</default>
+                    <label>Poor Qualification</label>
+                </value>
+                <value>
+                    <fullName>Price</fullName>
+                    <default>false</default>
+                    <label>Price</label>
+                </value>
+                <value>
+                    <fullName>Timing</fullName>
+                    <default>false</default>
+                    <label>Timing</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>MainCompetitors__c</fullName>
@@ -196,16 +157,6 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Name</fullName>
-        <trackFeedHistory>true</trackFeedHistory>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
-        <fullName>NextStep</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
         <fullName>OrderNumber__c</fullName>
         <externalId>false</externalId>
         <label>Order Number</label>
@@ -215,44 +166,6 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>OwnerId</fullName>
-        <trackFeedHistory>true</trackFeedHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>PartnerAccountId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>Pricebook2Id</fullName>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>Probability</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
-        <fullName>StageName</fullName>
-        <trackFeedHistory>true</trackFeedHistory>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>Territory2Id</fullName>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>TotalOpportunityQuantity</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackTrending>false</trackTrending>
     </fields>
     <fields>
         <fullName>TrackingNumber__c</fullName>
@@ -265,14 +178,15 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <fields>
-        <fullName>Type</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-    </fields>
     <listViews>
         <fullName>AllOpportunities</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>TERR2_NAME</columns>
         <filterScope>Everything</filterScope>
         <label>All Opportunities</label>
     </listViews>
@@ -366,7 +280,6 @@
         </filters>
         <label>Won</label>
     </listViews>
-    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
     <recordTypes>
         <fullName>Business</fullName>
         <active>true</active>
@@ -434,6 +347,45 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Lost_Reason__c</picklist>
+            <values>
+                <fullName>Authority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Competition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feature</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactivity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lost Momentum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Need</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poor Qualification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Timing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Type</picklist>
             <values>
                 <fullName>Existing Customer - Downgrade</fullName>
@@ -453,24 +405,6 @@
             </values>
         </picklistValues>
     </recordTypes>
-    <searchLayouts>
-        <customTabListAdditionalFields>OPPORTUNITY.NAME</customTabListAdditionalFields>
-        <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
-        <customTabListAdditionalFields>OPPORTUNITY.CLOSE_DATE</customTabListAdditionalFields>
-        <lookupDialogsAdditionalFields>OPPORTUNITY.NAME</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>ACCOUNT.SITE</lookupDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>OPPORTUNITY.NAME</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>ACCOUNT.SITE</lookupPhoneDialogsAdditionalFields>
-        <searchResultsAdditionalFields>OPPORTUNITY.NAME</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>ACCOUNT.SITE</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>OPPORTUNITY.STAGE_NAME</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>OPPORTUNITY.CLOSE_DATE</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
-    </searchLayouts>
-    <sharingModel>ReadWrite</sharingModel>
     <webLinks>
         <fullName>DeliveryStatus</fullName>
         <availability>online</availability>
